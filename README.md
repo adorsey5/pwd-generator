@@ -1,2 +1,1 @@
-# pwd-generator
-a password generator powered by Javascript
+# Password Generator Starter Code
