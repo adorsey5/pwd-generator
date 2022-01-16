@@ -59,6 +59,19 @@ function generatePassword(){
     allcharacters = allcharacters.concat(specialChar);
     }
 
+    // Created a function for random password 
+  var pwdArray = [];
+
+  for (var i = 0; i < pwdLength; i++) {
+    var options = allcharacters[Math.floor(Math.random() * allcharacters.length)];
+    pwdArray[i] = options; 
+  }
+
+  var finalPwd = pwdArray.join("");
+  return finalPwd; // generated password on the page by returning a value for "Generate Password" button was clicked in the console log  
+};
+
+  // ASSIGNMENT/STARTER CODE
   // Write password to the #password input
   function writePassword() {
     var password = generatePassword();
@@ -69,4 +82,4 @@ function generatePassword(){
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);} 
+generateBtn.addEventListener("click", writePassword);
