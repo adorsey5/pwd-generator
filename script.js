@@ -28,21 +28,30 @@ function validate(){
   confirmABCuprcase = confirm("Will your password have uppercase letters?");
   confirmNumbers = confirm("Will your password have numbers?");
   confirmspecialChar = confirm("Will your password have special characters?");
+  return confirmABClwrcase || confirmABCuprcase || confirmNumbers || confirmspecialChar;
 }
 
 // Defined the function generatePassword, (which was missing in the starter code). Generate the password based on the prompts
 function generatePassword(){
   console.log("You clicked the 'Generate Password' button"); // confirmed that the "Generate Password" button was clicked in the console log
 
+ var isInputValid;
+ 
   // Prompts the user input
   pwdLength = parseInt(prompt("Password length must be between 8 and 128 characters. Please choose the length of your password \nMin.: 8 characters \nMax: 128 characters"));
   
   if (pwdLength >= 8 && pwdLength <= 128) {
     test = "TRUE!";
-    validate();
+    isInputValid = validate();
   } else{
     test = "FALSE!";
-    pwdLength = parseInt(prompt("Password must be between 8 and 128 characters. Please try again. "));
+    pwdLength = alert("Password must be between 8 and 128 characters. Please try again.");
+    return ("Try secure password again");
+  }
+
+  while (!isInputValid) {
+    alert ("Invalid input. Must choose at least one character option.");
+    isInputValid = validate();
   }
 
   //  IF statements for password user inputs
@@ -53,7 +62,7 @@ function generatePassword(){
     allcharacters = allcharacters.concat(abcUprcase);
     }
     if (confirmNumbers){
-    allcharacters = numbers;
+    allcharacters = allcharacters.concat(numbers);
     }
     if (confirmspecialChar){
     allcharacters = allcharacters.concat(specialChar);
