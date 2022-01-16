@@ -45,6 +45,20 @@ function generatePassword(){
     pwdLength = parseInt(prompt("Password must be between 8 and 128 characters. Please try again. "));
   }
 
+  //  IF statements for password user inputs
+  if (confirmABClwrcase){
+    allcharacters = allcharacters.concat(abcLwrcase);
+    }
+    if (confirmABCuprcase){
+    allcharacters = allcharacters.concat(abcUprcase);
+    }
+    if (confirmNumbers){
+    allcharacters = numbers;
+    }
+    if (confirmspecialChar){
+    allcharacters = allcharacters.concat(specialChar);
+    }
+
   // Write password to the #password input
   function writePassword() {
     var password = generatePassword();
