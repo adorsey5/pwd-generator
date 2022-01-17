@@ -1,7 +1,7 @@
 # :lock_with_ink_pen: The Password Generator Challenge :lock_with_ink_pen:
 
 ## Overview :book:
-For this challenge I was assigned to refactor a password generator that can adapt to multiple interfaces and browers.  The password generator features HTML, CSS and powered by Javascript.
+For this challenge I was assigned to refactor a random password generator that can adapt to multiple interfaces and browers.  The password generator features HTML, CSS and powered by Javascript.
 
 
 ### User Story :notebook_with_decorative_cover:

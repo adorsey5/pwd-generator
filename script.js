@@ -1,6 +1,5 @@
 // ASSIGNMENT/STARTER CODE
 
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate"); 
 
@@ -50,24 +49,24 @@ function generatePassword(){
   }
 
   while (!isInputValid) {
-    alert ("Invalid input. Must choose at least one character option.");
+    alert ("Invalid input. Must choose at least one character option."); //validated and at least one character type should be selected
     isInputValid = validate();
   }
 
 //  IF statements for password user inputs
 //For One Type of Variable Inputted
-if (confirmNumbers){
+if (confirmABClwrcase){
+  allcharacters = abcLwrcase;
+  }
+  if (confirmABCuprcase){
+    allcharacters = abcUprcase;
+    }   
+  if (confirmNumbers){
   allcharacters = numbers;
   }
   if (confirmspecialChar){
   allcharacters = specialChar;
   } 
-  if (confirmABClwrcase){
-  allcharacters = abcLwrcase;
-  }
-  if (confirmABCuprcase){
-  allcharacters = abcUprcase;
-  }
 
  //For Two Types of Variable Inputted
  if (confirmspecialChar && confirmABClwrcase){
