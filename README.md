@@ -43,7 +43,7 @@ THEN the password is either displayed in an alert or written to the page
 
 Click the following link to visit the webpage:
 
-[A live link to the webpage](https://adorsey5.github.io/revise-the-sunrise/)
+[A live link to the webpage](https://adorsey5.github.io/pwd-generator/)
 
 
 The following image is a screenshot of the webpage:
