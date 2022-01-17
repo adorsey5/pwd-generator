@@ -48,7 +48,7 @@ Click the following link to visit the webpage:
 
 The following image is a screenshot of the webpage:
 
-![Screenshot](./assets/images/Horiseon-refactor-screen-shot.png)
+![Screenshot](Pwd-Generator-Screenshot.png)
 
 ---
 ## :capital_abcd:Languages and Technology Used :computer:

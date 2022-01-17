@@ -35,14 +35,14 @@ function validate(){
 function generatePassword(){
   console.log("You clicked the 'Generate Password' button"); // confirmed that the "Generate Password" button was clicked in the console log
 
- var isInputValid;
- 
+ var isInputValid; // varible to validate user input
+
   // Prompts the user input
   pwdLength = parseInt(prompt("Password length must be between 8 and 128 characters. Please choose the length of your password \nMin.: 8 characters \nMax: 128 characters"));
   
   if (pwdLength >= 8 && pwdLength <= 128) {
     test = "TRUE!";
-    isInputValid = validate();
+    isInputValid = validate(); // validated user input
   } else{
     test = "FALSE!";
     pwdLength = alert("Password must be between 8 and 128 characters. Please try again.");
@@ -54,21 +54,61 @@ function generatePassword(){
     isInputValid = validate();
   }
 
-  //  IF statements for password user inputs
+//  IF statements for password user inputs
+//For One Type of Variable Inputted
+if (confirmNumbers){
+  allcharacters = numbers;
+  }
+  if (confirmspecialChar){
+  allcharacters = specialChar;
+  } 
   if (confirmABClwrcase){
-    allcharacters = allcharacters.concat(abcLwrcase);
-    }
-    if (confirmABCuprcase){
-    allcharacters = allcharacters.concat(abcUprcase);
-    }
-    if (confirmNumbers){
-    allcharacters = allcharacters.concat(numbers);
-    }
-    if (confirmspecialChar){
-    allcharacters = allcharacters.concat(specialChar);
-    }
+  allcharacters = abcLwrcase;
+  }
+  if (confirmABCuprcase){
+  allcharacters = abcUprcase;
+  }
 
-    // Created a function for random password 
+ //For Two Types of Variable Inputted
+ if (confirmspecialChar && confirmABClwrcase){
+  allcharacters = specialChar.concat(abcLwrcase);
+}
+if (confirmNumbers && confirmABCuprcase){
+  allcharacters = numbers.concat(abcUprcase);
+}
+if (confirmABClwrcase && confirmABCuprcase){
+  allcharacters = abcLwrcase.concat(abcUprcase);
+}
+if (confirmNumbers && confirmspecialChar){
+  allcharacters = numbers.concat(specialChar);
+}
+if (confirmspecialChar && confirmABCuprcase){
+  allcharacters = specialChar.concat(abcUprcase);
+}
+if (confirmNumbers && confirmABClwrcase){
+  allcharacters = numbers.concat(abcLwrcase);
+}
+
+ //For Three Types of Variable Inputted
+ if (confirmspecialChar && confirmABClwrcase && confirmABCuprcase) {
+  allcharacters = specialChar.concat(abcLwrcase,abcUprcase);
+}
+if (confirmNumbers && confirmABClwrcase && confirmABCuprcase) {
+  allcharacters = numbers.concat(abcLwrcase,abcUprcase);
+}
+if (confirmNumbers && confirmspecialChar && confirmABCuprcase) {
+  allcharacters = numbers.concat(specialChar,abcUprcase);
+}
+if (confirmNumbers && confirmspecialChar && confirmABClwrcase) {
+  allcharacters = numbers.concat(specialChar,abcLwrcase);
+}
+
+  //For Four Types of Variable Inputted
+if (confirmNumbers && confirmspecialChar && confirmABClwrcase && confirmABCuprcase){
+  allcharacters = numbers.concat (specialChar, abcLwrcase, abcUprcase);
+}
+
+// Created a function for random password 
   var pwdArray = [];
 
   for (var i = 0; i < pwdLength; i++) {
